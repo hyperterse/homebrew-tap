@@ -37,7 +37,9 @@ class Hyperterse < Formula
   end
 
   def install
-    bin.install "hyperterse"
+    # Homebrew downloads the binary file, rename it to 'hyperterse'
+    binary = Dir["hyperterse-*"].first
+    bin.install binary => "hyperterse"
   end
 
   test do
