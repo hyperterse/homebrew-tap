@@ -8,30 +8,30 @@
 class Hyperterse < Formula
   desc "A declarative interface to connect your database to your AI agents"
   homepage "https://hyperterse.com"
-  version "2.2.1"
+  version "2.3.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/hyperterse/hyperterse/releases/download/v#{version}/hyperterse-darwin-amd64"
-      sha256 "6be9beef22d6979254f48d1fff5c643095696fb2a6c6d71bb35b3c26083ff7f9"
+      sha256 "7976c271aa2019dd7234d4fc13c95e1110c39e8bebcc56c499c0187624007107"
     elsif Hardware::CPU.arm?
       url "https://github.com/hyperterse/hyperterse/releases/download/v#{version}/hyperterse-darwin-arm64"
-      sha256 "d9679837e45a96fa3bf31a591ae591b24f34aaaaa2e2fb6e247f27365d19fc32"
+      sha256 "3c5b7e5a1171f6b0e9c81e58b8223b4bb499264fe7999113941b3c88ec59dbfc"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/hyperterse/hyperterse/releases/download/v#{version}/hyperterse-linux-amd64"
-      sha256 "ed033c1bc6ba2b277514ea0ee2a85c96faf1169338d3d9ae0b7eb65e094e15cc"
+      sha256 "0b0c5c19a92b6acc2c7d56930ad1ca42329dfe629c54c57ad2c6bbcc418684a7"
     elsif Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/hyperterse/hyperterse/releases/download/v#{version}/hyperterse-linux-arm64"
-        sha256 "b30b8180a121c518b371c86f33d030bfc67aa5617a2f92440d9938152e99e2a9"
+        sha256 "6a49858f6bdc6bbd19d8d509f33d74786c255fcd0fde21d13880fc165405dba5"
       else
         url "https://github.com/hyperterse/hyperterse/releases/download/v#{version}/hyperterse-linux-arm"
-        sha256 "2f7b5a4bca74abdc170283188402308749b98a0a13cbaf5d42e4740401b07812"
+        sha256 "26a5815e31d31ac0180471222fee0112689a218e0dea11a46bcee9e0b0a8b629"
       end
     end
   end
